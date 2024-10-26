@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button type="submit">submit</button>
+    <script>
+var input=document.querySelector("input")
+var btn1=document.querySelector("button")
+btn1.addEventListener("click",function(event){
+    event.preventDefault();
+    if(input.value.length>10)
+    console.log("Password is Strong")
+   else if(input.value.length<10&&input.value.length>5){
+    console.log("Password is Medium")
+   }
+   else{
+    console.log("Password is weak")
+   }
+})
+</script>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    Enter Password:<input type="text">
+    Confirm Password:<input type="text"><br>
+    <span style="color:red">passsword is not matched</span><br>
+    <button>Submit</button>
+    <script>
+        inpt1=document.querySelectorAll("input")[0]
+        inpt2=document.querySelectorAll("input")[1]
+        btn=document.querySelectorAll("button")
+        btn[0].addEventListener("click",function(event){
+            event.preventDefault();
+            var span=document.querySelector("span")
+            if(inpt1.value==inpt2.value){
+                console.log("Password is matched")
+
+            }
+            else{
+                span.style.display="block"
+            }
+
+        })
+        
+
+        
+    </script>
+    
+</body>
+</html>
